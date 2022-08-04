@@ -31,7 +31,9 @@ const ImagemLogo = styled.img`
     margin-left: 65px;
   }
   `
-
+ /**
+  * 
+  */
 
   export class Header extends Component {
     render() {
