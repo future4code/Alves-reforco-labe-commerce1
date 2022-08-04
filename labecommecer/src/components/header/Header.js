@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-component';
+import styled from 'styled-components';
 import LogoSpaceX from './../img/Logo.png';
 
 const Cabecalho = styled.div`
