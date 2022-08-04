@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Header } from './components/header/Header';
-import { Footer} from './components/footer/Footer';
-import { Filtro } from './components/filtro/Filtro';
-import { Carrinho } from './components/carrinho/Carrinho';
+import  Header  from './components/header/Header';
+import  Footer from './components/footer/Footer';
+import  Filtro  from './components/filtro/Filtro';
+import  Carrinho  from './components/carrinho/Carrinho';
 import styled from 'styled-components';
 import { MenuCentral, Imagem, Botao, Card2, Titulo, Preco } from './components/lista/Styled';
 
@@ -32,8 +32,7 @@ const Principal = styled.div`
         width: 75vw;
   }
 `
-
-export default class App extends Component {
+class App extends React.Component {
   state = {
     camisas: [
       {
@@ -184,8 +183,8 @@ export default class App extends Component {
   render() {
     return (
       <Principal>
-        <Header />
-        <Filtro
+      <Header />
+      <Filtro
           atualizaMinPreco={this.atualizaMinPreco}
           minPrice={this.state.minPrice}
           atualizaMaxPreco={this.atualizaMaxPreco}
@@ -195,39 +194,16 @@ export default class App extends Component {
           atualizaOrdenacao={this.atualizaOrdenacao}
           ordenacao={this.state.ordenacao}
         />
-
-        <MenuCentral>
-          {this.state.camisas.filter(camisa => {
-            // Filtragem valor mínimo
-            return this.state.minPrice === "" || camisa.value >= this.state.minPrice
-          }).filter(camisa => {
-            // Filtragem valor máximo
-            return this.state.maxPrice === "" || camisa.value <= this.state.maxPrice
-          }).filter(camisa => {
-            // Filtragem pelo nome
-            return camisa.name.toLowerCase().includes(this.state.pesquisa.toLowerCase())
-          }).sort((currentJob, nextJob) => {
-            return this.state.ordenacao * (currentJob.value - nextJob.value)
-          }).map(camisa => {
-            return (
-              <Card2>
-                <Imagem src={camisa.imageUrl} />
-                <Titulo>{camisa.name}</Titulo>
-                <Preco><strong>{`R$ ${camisa.value}`}</strong></Preco>
-                <Botao id={camisa.id} name={camisa.name} value={camisa.value} onClick={this.atualizaCarrinho}>Comprar</Botao>
-              </Card2>
-            )
-          })
-          }
-        </MenuCentral>
-
+         
         <Carrinho
           carrinho={this.state.carrinho}
           removerItem={this.removerItem}
         />
-
-        <Footer />
+        
       </Principal>
     );
   }
 }
+
+
+export default App;

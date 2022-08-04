@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import LogoSpaceX from './../img/Logo.png';
+import SpaceX from './../img/Logo.png';
 
 const Cabecalho = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const Box1 = styled.div`
   height: 100%;
   `
 const ImagemLogo = styled.img`
-  width: 100%;
+  width: 70px;
   margin: 0 20px 0 50px;
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     display: flex;
@@ -33,12 +33,12 @@ const ImagemLogo = styled.img`
   `
 
 
-  export class Header extends Component {
+class Header extends React.Component {
     render() {
         return(
             <Cabecalho>
                 <Box1>
-                    <ImagemLogo src={LogoSpaceX} />
+                    <ImagemLogo src={SpaceX} />
                 </Box1>
             </Cabecalho>
         )
@@ -46,3 +46,5 @@ const ImagemLogo = styled.img`
 
 
   }
+
+export default Header;  
