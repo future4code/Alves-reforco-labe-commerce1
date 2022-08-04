@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import LogoSpaceX from './../img/Logo.png';
+import SpaceX from './../img/Logo.png';
 
 const Cabecalho = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ const ImagemLogo = styled.img`
         return(
             <Cabecalho>
                 <Box1>
-                    <ImagemLogo src={LogoSpaceX} />
+                    <ImagemLogo src={SpaceX} />
                 </Box1>
             </Cabecalho>
         )

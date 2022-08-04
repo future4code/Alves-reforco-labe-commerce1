@@ -198,13 +198,13 @@ export default class App extends Component {
 
         <MenuCentral>
           {this.state.camisas.filter(camisa => {
-            // Filtragem valor mínimo
+           
             return this.state.minPrice === "" || camisa.value >= this.state.minPrice
           }).filter(camisa => {
-            // Filtragem valor máximo
+            
             return this.state.maxPrice === "" || camisa.value <= this.state.maxPrice
           }).filter(camisa => {
-            // Filtragem pelo nome
+            
             return camisa.name.toLowerCase().includes(this.state.pesquisa.toLowerCase())
           }).sort((currentJob, nextJob) => {
             return this.state.ordenacao * (currentJob.value - nextJob.value)
