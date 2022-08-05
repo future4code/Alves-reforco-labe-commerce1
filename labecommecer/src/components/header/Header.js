@@ -31,7 +31,9 @@ const ImagemLogo = styled.img`
     margin-left: 65px;
   }
   `
-
+ /**
+  * 
+  */
 
 class Header extends React.Component {
     render() {

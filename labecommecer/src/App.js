@@ -194,7 +194,36 @@ class App extends React.Component {
           atualizaOrdenacao={this.atualizaOrdenacao}
           ordenacao={this.state.ordenacao}
         />
+
          
+
+
+        <MenuCentral>
+          {this.state.camisas.filter(camisa => {
+           
+            return this.state.minPrice === "" || camisa.value >= this.state.minPrice
+          }).filter(camisa => {
+            
+            return this.state.maxPrice === "" || camisa.value <= this.state.maxPrice
+          }).filter(camisa => {
+            
+            return camisa.name.toLowerCase().includes(this.state.pesquisa.toLowerCase())
+          }).sort((currentJob, nextJob) => {
+            return this.state.ordenacao * (currentJob.value - nextJob.value)
+          }).map(camisa => {
+            return (
+              <Card2>
+                <Imagem src={camisa.imageUrl} />
+                <Titulo>{camisa.name}</Titulo>
+                <Preco><strong>{`R$ ${camisa.value}`}</strong></Preco>
+                <Botao id={camisa.id} name={camisa.name} value={camisa.value} onClick={this.atualizaCarrinho}>Comprar</Botao>
+              </Card2>
+            )
+          })
+          }
+        </MenuCentral>
+
+
         <Carrinho
           carrinho={this.state.carrinho}
           removerItem={this.removerItem}
