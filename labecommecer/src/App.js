@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Header } from './components/header/Header';
-import { Footer} from './components/footer/Footer';
-import { Filtro } from './components/filtro/Filtro';
-import { Carrinho } from './components/carrinho/Carrinho';
+import  Header  from './components/header/Header';
+import  Footer from './components/footer/Footer';
+import  Filtro  from './components/filtro/Filtro';
+import  Carrinho  from './components/carrinho/Carrinho';
 import styled from 'styled-components';
 import { MenuCentral, Imagem, Botao, Card2, Titulo, Preco } from './components/lista/Styled';
 
@@ -32,8 +32,7 @@ const Principal = styled.div`
         width: 75vw;
   }
 `
-
-export default class App extends Component {
+class App extends React.Component {
   state = {
     camisas: [
       {
@@ -184,8 +183,8 @@ export default class App extends Component {
   render() {
     return (
       <Principal>
-        <Header />
-        <Filtro
+      <Header />
+      <Filtro
           atualizaMinPreco={this.atualizaMinPreco}
           minPrice={this.state.minPrice}
           atualizaMaxPreco={this.atualizaMaxPreco}
@@ -195,6 +194,9 @@ export default class App extends Component {
           atualizaOrdenacao={this.atualizaOrdenacao}
           ordenacao={this.state.ordenacao}
         />
+
+         
+
 
         <MenuCentral>
           {this.state.camisas.filter(camisa => {
@@ -221,13 +223,16 @@ export default class App extends Component {
           }
         </MenuCentral>
 
+
         <Carrinho
           carrinho={this.state.carrinho}
           removerItem={this.removerItem}
         />
-
-        <Footer />
+        
       </Principal>
     );
   }
 }
+
+
+export default App;

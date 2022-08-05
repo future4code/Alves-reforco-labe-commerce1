@@ -24,13 +24,13 @@ const ValorTotal = styled.div`
   margin: 20px 0 0 5px;
 `
 
-export class Carrinho extends Component {
+class Carrinho extends React.Component {
   render() {
     let soma = 0
     return (
       <MenuDireita>
         <h3>Carrinho</h3>
-        {this.props.carrinho.map(camisa => {
+        {this.props.carrinho &&  this.props.carrinho.map(camisa => {
           soma = soma + camisa.repeticao * camisa.value;
           return (
             <ItensCarrinho >
@@ -50,3 +50,4 @@ export class Carrinho extends Component {
     )
   }
 }
+export default Carrinho;

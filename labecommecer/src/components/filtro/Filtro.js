@@ -44,7 +44,7 @@ const Op = styled.option`
   width: 10px;
 `
 
-export class Filtro extends Component {
+class Filtro extends React.Component {
   render() {
     return (
       <MenuEsquerda>
@@ -95,3 +95,5 @@ export class Filtro extends Component {
     )
   }
 }
+
+export default Filtro;
