@@ -24,12 +24,18 @@ const Principal = styled.div`
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 225px 1fr 225px;
   box-sizing: border-box;
+  
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     
-    display: flex;
-    flex-direction: column;
-        align-items: unset;
-        width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  width: 75vw;
+  background-color: #e8f6ea;
+  border-radius: 20px;
+  border: 1px solid #cce7d0;
+  margin: 5px;
+  color: #088178;
   }
 `
 class App extends React.Component {

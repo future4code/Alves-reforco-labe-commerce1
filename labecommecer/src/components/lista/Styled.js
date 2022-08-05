@@ -23,6 +23,7 @@ export const Imagem = styled.img`
   width: 150px;
     overflow: hidden;
     width: 100%;
+    border-radius: 20px;
     max-width: 100%;
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -37,18 +38,18 @@ export const Imagem = styled.img`
 export const Botao = styled.button`
   width: 150px;
   border: none;
-  background-color: black;
+  background-color: green;
   color: white;
-  
+  border-radius: 15px;
   font-size: 20px;
   height: 25px;
   cursor: pointer;
   margin: 0;
   :hover{
-    box-shadow: 1px 1px 5px #006cff;
+  box-shadow: 1px 1px 5px #006cff;
   }
   :active{
-    color: black;
+    color: #cce7d0;
   background-color: white;
   }
   `
@@ -62,6 +63,11 @@ export const Card2 = styled.div`
   box-shadow: 1px 1px 5px black;
   text-align: center;
   padding: 5px;
+  
+  border-radius: 20px;
+  border: 1px solid #cce7d0;
+  margin: 5px;
+  color: #088178;
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     width: 90%;
   }

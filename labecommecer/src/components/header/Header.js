@@ -2,24 +2,25 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import SpaceX from './../img/Logo.png';
 
+
 const Cabecalho = styled.div`
   display: flex;
   align-items: center;
   height: 60px;
   grid-column: 1/-1;
-  background-color: rgb(0,0,0);
+  background-color: #e8f6ea;
 `
-
+/* Acho que foi*/
 const Box1 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #e8f6ea;
   flex-basis: 225px;
   height: 100%;
   `
 const ImagemLogo = styled.img`
-  width: 70px;
+  width: 60px;
   margin: 0 20px 0 50px;
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     display: flex;

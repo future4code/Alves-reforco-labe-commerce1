@@ -7,7 +7,11 @@ const MenuEsquerda = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #e8f6ea;
+  border-radius: 20px;
+  border: 1px solid #cce7d0;
+  margin: 5px;
+  color: #088178;
 `
 
 const OrdenacaoTexto = styled.h3`

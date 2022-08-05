@@ -6,7 +6,11 @@ const MenuDireita = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #e8f6ea;
+  border-radius: 20px;
+  border: 1px solid #cce7d0;
+  margin: 5px;
+  color: #088178;
 `
 
 const ItensCarrinho = styled.div`
@@ -14,15 +18,21 @@ const ItensCarrinho = styled.div`
   justify-content: space-between;
   width: 90%;
   margin: 5px;
+  
 `
 
 const BotaoRemover = styled.button`
+  border-radius: 10px;
+  border: 2px solid #cce7d0;
+  margin: 5px;
+  color: #088178;
 `
 
 const ValorTotal = styled.div`
   width: 90%;
   margin: 20px 0 0 5px;
 `
+
 
 class Carrinho extends React.Component {
   render() {
